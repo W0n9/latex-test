@@ -1,5 +1,6 @@
 {
   "name": "LaTeXspaces",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
   "remoteUser": "root",
   "customizations": {

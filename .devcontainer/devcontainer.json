@@ -1,7 +1,7 @@
 {
   "name": "LaTeXspaces",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+  "image": "ghcr.io/w0n9/images/ubuntu-latex:20240705",
+  //"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
   "remoteUser": "root",
   "customizations": {
     "vscode": {

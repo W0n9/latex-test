@@ -1,8 +1,8 @@
 {
   "name": "LaTeXspaces",
-  "image": "ghcr.io/w0n9/images/ubuntu-latex:20240705",
+  "image": "ghcr.io/w0n9/images/ubuntu-latex:20240710",
   //"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
-  "remoteUser": "root",
+  // "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -13,7 +13,26 @@
         "files.autoSave": "onFocusChange",
         "latex-workshop.latex.autoBuild.run": "onSave",
         "latex-workshop.latex.recipe.default": "lastUsed",
-        "latex-workshop.latex.outDir": "./PDF"
+        "latex-workshop.latex.outDir": "./PDF",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          }
+        ]
       }
     }
   },
